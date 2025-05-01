@@ -1,12 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Resume Analysis Result</title>
     <style>
-      body { font-family: Arial, sans-serif; padding: 30px; background-color: #f4f4f4; }
-      h2, h3 { color: #333; }
-      ul { background: #fff; padding: 20px; border-radius: 8px; list-style-type: square; }
-      li { margin-bottom: 8px; }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background-color: #f4f4f4;
+      }
+      h2, h3 {
+        color: #333;
+      }
+      ul {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        list-style-type: square;
+      }
+      li {
+        margin-bottom: 8px;
+      }
       .score-box {
         background: #e0ffe0;
         padding: 15px;
@@ -15,10 +28,26 @@
         margin-top: 20px;
         font-size: 18px;
       }
-      a { text-decoration: none; color: #007BFF; display: inline-block; margin-top: 20px; }
+      a {
+        text-decoration: none;
+        color: #007BFF;
+        display: inline-block;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
     <h2>Detected Skills</h2>
     <ul>
       {% for skill in skills %}
+        <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+
+    <div class="score-box">
+      <h3>Match Score: {{ score }}%</h3>
+    </div>
+
+    <a href="/">Analyze another resume</a>
+  </body>
+</html>
