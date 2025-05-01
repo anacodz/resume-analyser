@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Resume Analysis Result</title>
+</head>
+<body>
+    <h2>Matched Skills:</h2>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Match Score:</h2>
+    <div>{{ score }}%</div>
+</body>
+</html>
